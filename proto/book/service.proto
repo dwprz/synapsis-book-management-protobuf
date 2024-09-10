@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package book;
+
+import "proto/book/type/book.proto";
+
+option go_package = "github.com/dwprz/synapsis-book-management-protobuf/protogen/book";
+
+service BookService {
+    rpc FindManyByIds(book.type.BookIds) returns (book.type.FindManyRes) {}
+}

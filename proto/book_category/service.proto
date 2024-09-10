@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package book_category;
+
+import "proto/book_category/type/book_category.proto";
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/dwprz/synapsis-book-management-protobuf/protogen/book_category";
+
+service BookCategoryService {
+    rpc DeleteBookFromCategoryReq(book_category.type.BookId) returns (google.protobuf.Empty) {}
+}

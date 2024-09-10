@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package book_category.type;
+
+option go_package = "github.com/dwprz/synapsis-book-management-protobuf/protogen/book_category";
+
+message BookId {
+    uint32 id = 1;
+}
